@@ -21,18 +21,19 @@ def view_records():
         print("\nDatabase is empty.")
 
 def choices(username):
-    choice = input('A. DEPOSIT \nB. WITHDRAW \nC. CHECK BALANCE \nD. QUIT \nWhat you want : ').capitalize()
-    if(choice=='A'):
-        deposit(username)
-    elif(choice=='B'):
-        withdraw(username)
-    elif(choice=='C'):
-        check_Balance(username)
-    elif(choice=='D'):
-        print('EXITING...THANKS FOR VISITING..!')
-        exit()
-    else:
-        print('Invaild choice!')
+    while True:
+        choice = input('A. DEPOSIT \nB. WITHDRAW \nC. CHECK BALANCE \nD. QUIT \nWhat you want : ').capitalize()
+        if(choice=='A'):
+            deposit(username)
+        elif(choice=='B'):
+            withdraw(username)
+        elif(choice=='C'):
+            check_Balance(username)
+        elif(choice=='D'):
+            print('EXITING...From bank menu..!')
+            break
+        else:
+            print('Invaild choice!')
 
 
 def deposit(username):
